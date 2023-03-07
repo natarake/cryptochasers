@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className="rounded-div flex items-center justify-between h-20 font-bold">
-      <Link to="/react-crypto">
+      <Link to="/">
         <h1 className="text-2xl">CryptoChasers</h1>
       </Link>
       <div className="hidden md:block">
@@ -66,7 +66,7 @@ const Navbar = () => {
       >
         <ul className="w-full p-4 ">
           <li className="border-b py-6">
-            <Link onClick={handleNav} to="/react-crypto">
+            <Link onClick={handleNav} to="/">
               Home
             </Link>
           </li>
