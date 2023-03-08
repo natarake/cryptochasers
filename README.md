@@ -1,6 +1,6 @@
 # Cryptochasers
 
-![CryptoChasers](https://i.ibb.co/3zxZ0JC/GladTube.png)
+![CryptoChasers](https://i.ibb.co/zFFR5qw/Cryptochasers.png)
 
 CryptoChasers is a cryptocurrency tracker built using React, Tailwind and Firebase. It is based on Code Commerce's [YouTube Tutorial.](https://www.youtube.com/watch?v=AcYhi08e404)
 
