@@ -1,8 +1,30 @@
 import React, { useState } from "react";
 import CoinItem from "./CoinItem";
+import ReactPaginate from "react-paginate";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 const CoinSearch = ({ coins }) => {
   const [searchText, setSearchText] = useState("");
+  const [pageNumber, setPageNumber] = useState(0);
+  const coinsPerPage = 10;
+  const pagesVisited = pageNumber * coinsPerPage;
+  const displayCoins = coins
+    .filter((value) => {
+      if (
+        searchText === "" ||
+        value.name.toLowerCase().includes(searchText.toLowerCase())
+      ) {
+        return true;
+      }
+      return false;
+    })
+    .slice(pagesVisited, pagesVisited + coinsPerPage)
+    .map((coin) => <CoinItem key={coin.id} coin={coin} />);
+  const pageCount = Math.ceil(coins.length / coinsPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
   return (
     <div className="rounded-div my-4">
       <div className="flex flex-col md:flex-row justify-between pt-4 pb-6 text-center md:text-right">
@@ -31,22 +53,19 @@ const CoinSearch = ({ coins }) => {
             <th>Last 7 Days</th>
           </tr>
         </thead>
-        <tbody>
-          {coins
-            .filter((value) => {
-              if (searchText === "") {
-                return value;
-              } else if (
-                value.name.toLowerCase().includes(searchText.toLowerCase())
-              ) {
-                return value;
-              }
-            })
-            .map((coin) => (
-              <CoinItem key={coin.id} coin={coin} />
-            ))}
-        </tbody>
+        <tbody>{displayCoins}</tbody>
       </table>
+      <ReactPaginate
+        previousLabel={<GrPrevious />}
+        nextLabel={<GrNext />}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"flex justify-center my-8"}
+        pageClassName={"flex items-center justify-center p-0 w-[30px]"}
+        previousLinkClassName={"flex items-center p-1"}
+        nextLinkClassName={"flex items-center p-1"}
+        activeClassName={"border rounded-full bg-primary text-primary"}
+      />
     </div>
   );
 };

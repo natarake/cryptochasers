@@ -8,7 +8,6 @@ const Trending = () => {
   useEffect(() => {
     axios.get(url).then((res) => {
       setTrending(res.data.coins);
-      console.log(res.data.coins);
     });
   }, []);
 
