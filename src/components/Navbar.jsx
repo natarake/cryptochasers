@@ -23,6 +23,8 @@ const Navbar = () => {
     }
   };
 
+  console.log(user);
+
   return (
     <div className="rounded-div flex items-center justify-between h-20 font-bold">
       <Link to="/">

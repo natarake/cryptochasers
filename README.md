@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Cryptochasers
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![CryptoChasers](https://i.ibb.co/3zxZ0JC/GladTube.png)
 
-## Available Scripts
+CryptoChasers is a cryptocurrency tracker built using React, Tailwind and Firebase. It is based on Code Commerce's [YouTube Tutorial.](https://www.youtube.com/watch?v=AcYhi08e404)
 
-In the project directory, you can run:
+## What are the features of CryptoChasers
+
+Users can sign-in or sign-up to register a new account to access the app. Although signing-in is not required to use the app, users must sign-in to add coins to their watchlist. The app fetches the top 250 cryptocurrencies in real-time from coingecko API, which is paginated to display only 10 results per page. Users can filter through the results to look for specific coins, and they can also view other details related to the coin they are viewing. Additionally, there is a trending panel that displays the top trending coins on Coin Gecko. The app allows users to choose between light or dark mode as a theme, and users can also log out.
+
+## What went well
+
+The tutorial strengthened my understanding of core react concepts, firebase authentication and storage, contextAPI, and the flexibility of tailwind CSS.
+
+## What are the challenges encountered
+
+The main challenge was deployment, as the initial deployment to Github did not display the fetched coins on the homepage. This was fixed by deploying the app to free-tier hosting on Render.
+
+## Codebase differences
+
+Increased coins fetched to 250 instead of just 10 in Clint' tutorial. Then I proceeded to implement the [react-pagination](https://www.youtube.com/watch?v=HANSMtDy508) that I learned from Pedrotech. Also improved the filter logic to get rid of the array prototype error with the assistance of ChatGPT.
+
+Styling wise, changed the display of Sign In and Sign Up buttons in the mobile menu to hidden when there is a user present.
+
+## Future improvements
+
+One of the future plans for improving the app is to enhance the user experience by enabling users to update their information and improving how their information is displayed.
+
+### Liked this repository?
+
+Please don't forget to leave a ⭐🙏🏻!
+
+## Run this app on your local machine
+
+In order to run this application on your local machine, you can run the following commands on the terminal:
+
+### `yarn`
+
+Installs the required package dependencies
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the client in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
